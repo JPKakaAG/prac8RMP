@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prac8RMP.MainPage">
+
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Общие данные">
+                <EntryCell Label="ФИО" Placeholder="Введите ФИО" x:Name="FIOEntry"/>
+                <EntryCell Label="Пол" Placeholder="Введите пол" x:Name="GenderEntry"/>
+                <EntryCell Label="Возраст" Placeholder="Введите возраст" x:Name="AgeEntry"/>
+            </TableSection>
+            <TableSection Title="Дополнительная информация">
+                <SwitchCell Text="Нужно ли общежитие?" x:Name="DormitorySwitch"/>
+                <SwitchCell Text="Является старостой?" x:Name="LeaderSwitch"/>
+            </TableSection>
+            <TableSection Title="Оценки">
+                <EntryCell Label="Оценка по Математике" Placeholder="Введите оценку" x:Name="MathGradeEntry"/>
+                <EntryCell Label="Оценка по Русскому языку" Placeholder="Введите оценку" x:Name="RusLanGradeEntry"/>
+            </TableSection>
+            <TableSection  Title="Фото">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Button Text="Загрузить фото" Clicked="OnUploadPhotoTapped" />
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Image x:Name="UploadedImage" Aspect="AspectFit" HeightRequest="100" />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
