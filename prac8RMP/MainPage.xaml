@@ -7,7 +7,14 @@
         <TableRoot>
             <TableSection Title="Общие данные">
                 <EntryCell Label="ФИО" Placeholder="Введите ФИО" x:Name="FIOEntry"/>
-                <EntryCell Label="Пол" Placeholder="Введите пол" x:Name="GenderEntry"/>
+                <ViewCell>
+                    <Picker Title="Выберите пол" x:Name="Gender">
+                        <Picker.Items>
+                            <x:String>Мужской</x:String>
+                            <x:String>Женский</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </ViewCell>
                 <EntryCell Label="Возраст" Placeholder="Введите возраст" x:Name="AgeEntry"/>
             </TableSection>
             <TableSection Title="Дополнительная информация">
@@ -27,6 +34,13 @@
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" Padding="10">
                         <Image x:Name="UploadedImage" Aspect="AspectFit" HeightRequest="100" />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="Сохранение данных">
+                <ViewCell>
+                    <StackLayout   Orientation="Horizontal" Padding="10">
+                        <Button Text="Сохранить данные" Clicked="Button_Clicked" />
                     </StackLayout>
                 </ViewCell>
             </TableSection>
